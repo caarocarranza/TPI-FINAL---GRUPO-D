@@ -102,9 +102,15 @@ public class Menu {
             return;
         }
         for (Cliente c : clientes) {
-            System.out.println(c.getNombreCompleto() + " | DNI: " + c.getDni() + " | Teléfono: " + c.getTelefono());
-        }
+        System.out.println("\n----------------------------------");
+        System.out.println("CLIENTE: " + c.getNombreCompleto());
+        System.out.println("DNI: " + c.getDni());
+        System.out.println("Teléfono: " + c.getTelefono());
+
+        System.out.println("\nReservas del cliente:");
+        sistema.consultarReservas(c);
     }
+}
 
     private void registrarCancha() {
         System.out.print("Número de cancha: ");
